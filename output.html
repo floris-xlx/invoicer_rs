@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 40px;
+        padding: 20px;
+      }
+      .invoice-container {
+        max-width: 800px;
+        margin: auto;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-bottom: 10px;
+      }
+      .company-name {
+        font-size: 24px;
+        font-weight: 400;
+        opacity: 0.8;
+      }
+      .invoice-details,
+      .bill-to,
+      .invoice-author {
+        margin-top: 20px;
+      }
+      .invoice-details {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        max-width: 300px;
+      }
+      .amount-due {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .info-section {
+        display: flex;
+        justify-content: flex-start;
+        gap: 40px;
+      }
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      .total {
+        text-align: right;
+        font-weight: bold;
+      }
+      .footer {
+        margin-top: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #ddd;
+        font-size: 12px;
+      }
+      .invoice-name {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .margin {
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+      }
+
+      .invoice-note {
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        position: absolute;
+      }
+      .summary-wrapper {
+        margin-top: 20px;
+        width: fit-content;
+        max-width: 400px;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        transform: translateX(590px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="invoice-container">
+      <div class="header">
+        <div class="invoice-name">Invoice</div>
+        <div class="company-name">Example Corp</div>
+      </div>
+
+      <div class="invoice-details">
+        <strong>Invoice number:</strong> <span>12345</span>
+        <strong>Date of issue:</strong>
+        <span>January 1, 2023</span>
+        <strong>Date due:</strong>
+        <span>February 1, 2023</span>
+      </div>
+
+      <div class="info-section">
+        <div class="invoice-author">
+          <p><strong>John Doe</strong></p>
+          <p>
+            123 Main St<br />Suite 100<br />USA<br />555-1234<br />john.doe@example.com
+          </p>
+        </div>
+        <div class="bill-to">
+          <p><strong>Bill to:</strong></p>
+          <p>
+            Jane Smith<br />456 Elm St<br />Apt 2B<br />555-5678<br />jane.smith@example.com
+          </p>
+        </div>
+      </div>
+
+      <div class="amount-due">
+        $100.00 due February 1,
+        2023
+      </div>
+
+      <p>
+        <a style="font-size: 13px" href="http://example.com/pay"
+          >Pay Now</a
+        >
+      </p>
+      <p style="font-size: 13px">Please pay by the due date.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Qty</th>
+            <th>Unit Price</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Service Fee</td>
+            <td>1</td>
+            <td>$100.00</td>
+            <td>$100.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="invoice-note">Thank you for your business.</div>
+      <div class="summary-wrapper">
+        <div class="meow"></div>
+        <table>
+          <tr>
+            <td class="total">Subtotal</td>
+            <td>$100.00</td>
+          </tr>
+          <tr>
+            <td class="total">Total</td>
+            <td>$100.00</td>
+          </tr>
+          <tr>
+            <td class="total">Amount due</td>
+            <td>$100.00</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="footer">
+        <p>This is a computer-generated invoice.</p>
+        <p>Page 1 of 1</p>
+      </div>
+    </div>
+  </body>
+</html>
